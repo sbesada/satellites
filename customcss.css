@@ -13,21 +13,6 @@ html, body, #cesiumContainer {
 }
 
 
-
-@media only screen and (max-width: 800px) and (orientation: landscape) {
-.mobileDisable{
-  color: red;  
-}
-}
-	
-
-@media screen and (orientation: portrait) {
-.mobileDisable{
-  
-}
-
-}
-
 .width_100 {
    width: 100%
 }
