@@ -50,10 +50,9 @@
 	<script src="https://sbesada.github.io/satellites/code.min.js"></script>
 	
 
+</head>
 
 
-
- </head>
 <body>
   <div id="cesiumContainer">
 
@@ -61,7 +60,7 @@
   
   <div id="toolbar">
   
-    <button id="control" type="button" class="cesium-button">Control</button>
+    <button id="control" type="button" class="cesium-button mobileDisable">Satellites & Astro</button>
   
   </div>
   
@@ -73,12 +72,12 @@
  <div class="row">
    
      <div class="col minHeight_40">
-	  <label class="height_30 minWidth_70 color_white">Satellites</label>
+	  <label class="height_30 minWidth_70 color_white">Sat. Astro</label>
 	  <img src='https://sbesada.github.io/satellites/iconos/xlsx_24.png' data-toggle="tooltip" data-placement="top" title="No available"></img>
 	 </div>	   
      
 	 <div class="col minWidth_240 minHeight_40">
-	   <select id="satSel">			
+	   <select id="satSel" autocomplete="off" >			
 		</select>
 	
 	</div>
@@ -95,7 +94,7 @@
 
 
 	<div class="col minWidth_240 minHeight_40">		
-	  <input type="text" id="startDateDatepicker" class="width_100">		
+	  <input type="text" id="startDateDatepicker" class="width_100" autocomplete="off" >		
 	</div>	
 	
    </div>	  
@@ -103,13 +102,13 @@
    <div class="row">
    
      <div class="col  minHeight_40">
-	  <label  class="height_30 minWidth_70 color_white">Start hour</label>
-	  <img src='https://sbesada.github.io/satellites/iconos/info2_24.png' data-toggle="tooltip" data-placement="top" title="format:hh:mm:ss (in UTC + 00:00)"></img>
+	  <label id="startHour" class="height_30 minWidth_70 color_white">Start hour</label>
+	  <img src='https://sbesada.github.io/satellites/iconos/info2_24.png' data-toggle="tooltip" data-placement="top" title="format:hh:mm:ss (UTC + 00:00)"></img>
 	 </div>	   
      
 	 <div class="col minWidth_240 minHeight_40">
 	
-	  <input type="text" class="form-control height_30 timePicker" id="startHourTimepicker" name="timeFormat" ng-model="model.options.timeFormat">
+	  <input autocomplete="off"  type="text" class="form-control height_30 timePicker" id="startHourTimepicker" name="timeFormat" ng-model="model.options.timeFormat" >
 	
 	</div>
    
@@ -117,7 +116,7 @@
 	
    <div class="row">
     
-	<div class="col  minHeight_40">
+	<div class="col 	 minHeight_40">
 	  <label  class="height_30 minWidth_70 color_white">End date</label>
 	  <img src='https://sbesada.github.io/satellites/iconos/info2_24.png' data-toggle="tooltip" data-placement="top" title="The maximun end point depends on each satellite"></img>
 	</div>
@@ -125,7 +124,7 @@
 
 
 	<div class="col minWidth_240 minHeight_40">		
-	  <input type="text" id="endDateDatepicker" class="width_100">		
+	  <input autocomplete="off"  type="text" id="endDateDatepicker" class="width_100">		
 	</div>	
 	
    </div>	  
@@ -134,12 +133,12 @@
    
      <div class="col  minHeight_40">
 	  <label  class="height_30 minWidth_70 color_white">End hour</label>
-	  <img src='https://sbesada.github.io/satellites/iconos/info2_24.png' data-toggle="tooltip" data-placement="top" title="format:hh:mm:ss (in UTC + 00:00)"></img>
+	  <img src='https://sbesada.github.io/satellites/iconos/info2_24.png' data-toggle="tooltip" data-placement="top" title="format:hh:mm:ss (UTC + 00:00)"></img>
 	 </div>	   
      
 	 <div class="col minWidth_240 minHeight_40">
 	
-	  <input type="text" class="form-control height_30 timePicker" id="endHourTimepicker" name="timeFormat" ng-model="model.options.timeFormat">
+	  <input autocomplete="off"  type="text" class="form-control height_30 timePicker" id="endHourTimepicker" name="timeFormat" ng-model="model.options.timeFormat">
 	
 	</div>
    
@@ -153,7 +152,7 @@
 	 </div>	   
      
 	 <div class="col minWidth_240 minHeight_40 color_white">
-	     <input id="inputColor" class="jscolor colorSize" value="094BAB">
+	     <input autocomplete="off"  id="inputColor" class="jscolor colorSize" value="094BAB">
 	 </div>
 	
    
@@ -167,7 +166,7 @@
 	 </div>	   
      
 	 <div class="col minWidth_240 minHeight_40">
-	   <select id="orbitType">
+	   <select id="orbitType" autocomplete="off" >
 			<option value="1">Projection</option>        
 			<option value="2">Orbit</option>			
 		</select>
@@ -213,6 +212,5 @@
 
 </body>  
    
-
 
 </html>	
