@@ -60,6 +60,33 @@
 	  gtag('config', 'UA-161575947-1');
 	</script>
 
+	<script>
+
+	 $(document).ready(function() {
+	
+	 getCapabilities();
+		 
+	 });	
+	function getCapabilities(){
+
+			$.ajax({
+				 type: 'GET',
+				 url: 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/1.0.0/WMTSCapabilities.xml', 
+				 data:{'request':'sbesada'},
+				 dataType: 'xml',
+				 contentType: 'application/xml',
+				 success: getCapabilitiesSuccess, 
+				 error: displayObservatoriesError
+				});
+	}
+
+	function getCapabilitiesSuccess(data){
+	console.log(data);
+
+	}
+     
+	</script>
+
 
 
 </head>
